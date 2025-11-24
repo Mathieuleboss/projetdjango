@@ -1,0 +1,33 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}  <!-- Charge le tag static -->
+
+{% block title %}Menu{% endblock %}
+
+{% block content %}
+<h1 class="menu-title">Notre Menu</h1>
+
+<div class="menu-grid">
+
+    <div class="menu-card">
+        <img src="{% static 'restaurant/images/pizza-margherita-1200.png' %}" alt="Pizza">
+        <h3>Pizza Margherita</h3>
+        <p>Tomate, mozzarella, basilic frais.</p>
+        <span class="price">€12</span>
+    </div>
+
+    <div class="menu-card">
+        <img src="{% static 'restaurant/images/carbonara-e1521461363147.png' %}" alt="Pâtes">
+        <h3>Pâtes Carbonara</h3>
+        <p>Pâtes fraîches, crème, lardons et parmesan.</p>
+        <span class="price">€10</span>
+    </div>
+
+    <div class="menu-card">
+        <img src="{% static 'restaurant/images/salade-cesar-au-poulet_1147-401.png' %}" alt="Salade">
+        <h3>Salade César</h3>
+        <p>Laitue, poulet grillé, croûtons et parmesan.</p>
+        <span class="price">€9</span>
+    </div>
+
+</div>
+{% endblock %}

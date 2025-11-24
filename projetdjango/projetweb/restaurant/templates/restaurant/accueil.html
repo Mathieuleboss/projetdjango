@@ -1,0 +1,31 @@
+{% extends 'restaurant/base.html' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+<!-- ================= BANNIÈRE ================= -->
+<section class="banner">
+    <h1>Bienvenue au Restaurant Gourmet</h1>
+    <p>Découvrez une expérience culinaire inoubliable</p>
+    <a href="{% url 'menu' %}" class="btn btn-primary">Voir le Menu</a>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="about container">
+    <h2>À propos de nous</h2>
+    <p>
+        Depuis 2025, notre restaurant offre des plats délicieux préparés avec des ingrédients frais et locaux. 
+        Profitez d’une ambiance chaleureuse et d’un service de qualité.
+    </p>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact container">
+    <h2>Contactez-nous</h2>
+    <p>Téléphone : 01 23 45 67 89</p>
+    <p>Email : contact@restaurantgourmet.fr</p>
+    <p>Adresse : 123 Rue de la Cuisine, Paris</p>
+</section>
+
+{% endblock %}
