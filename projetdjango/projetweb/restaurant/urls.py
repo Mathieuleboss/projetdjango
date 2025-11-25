@@ -1,19 +1,26 @@
 from django.urls import path
 from . import views
-from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.page_accueil, name='accueil'),
     path('menu/', views.page_menu, name='menu'),
+
+    # Espace client/employé
     path('client/', views.page_client, name='client'),
     path('employe/', views.page_employe, name='employe'),
 
-    # UTILISER TA VUE personnalisée pour gérer les rôles !
+    # Authentification personnalisée
     path('login/', views.login_view, name='login'),
-
-    # Logout standard
-    path('logout/', auth_views.LogoutView.as_view(next_page='accueil'), name='logout'),
+    path('logout/', views.logout_view, name='logout'),
 
     # Inscription
-    path('register/', views.register, name='register'),
+    path('register/', views.register_view, name='register'),
+
+    # Réservations
+    path('reservations/', views.reservations, name='reservations'),
+    path('mes_reservations/', views.mes_reservations, name='mes_reservations'),
+
+    # Autres pages
+    path('commander/', views.commander, name='commander'),
+    path('avis/', views.avis, name='avis'),
 ]
